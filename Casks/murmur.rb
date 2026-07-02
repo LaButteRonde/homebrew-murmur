@@ -1,8 +1,6 @@
 cask "murmur" do
   version "0.1.0"
-  # TODO: remplacer par le sha256 du zip à la première release :
-  #   shasum -a 256 Murmur-darwin-arm64-0.1.0.zip
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "9fe91337c50afea1258f5a7f23ea4c489cf0e8133b8a6a09d04676746c62e348"
 
   url "https://github.com/LaButteRonde/homebrew-murmur/releases/download/v#{version}/Murmur-darwin-arm64-#{version}.zip"
   name "Murmur"
