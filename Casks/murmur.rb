@@ -11,9 +11,17 @@ cask "murmur" do
 
   app "Murmur.app"
 
+  # Mise à jour sans friction : l'instance en cours est quittée proprement
+  # avant le remplacement (TERM en filet), puis relancée par le postflight.
+  uninstall quit:   "com.murmur.app",
+            signal: ["TERM", "com.murmur.app"]
+
   postflight do
     system_command "/usr/bin/xattr",
       args: ["-dr", "com.apple.quarantine", "#{appdir}/Murmur.app"],
+      sudo: false
+    system_command "/usr/bin/open",
+      args: ["-a", "#{appdir}/Murmur.app"],
       sudo: false
   end
 
