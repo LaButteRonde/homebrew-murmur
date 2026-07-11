@@ -1,6 +1,6 @@
 cask "murmur" do
-  version "0.2.0"
-  sha256 "376e06b251bf29447ecfcc93c2563f5d58d33618c4355b61a8d03de72df5cca2"
+  version "0.2.1"
+  sha256 "0d8e6388b098669643e8498a7919f725ddbbbde28f6c7b395a6df435009f0124"
 
   url "https://github.com/LaButteRonde/homebrew-murmur/releases/download/v#{version}/Murmure-darwin-arm64-#{version}.zip"
   name "Murmure"
